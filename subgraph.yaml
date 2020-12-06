@@ -1,0 +1,33 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: PILLAR
+    network: mainnet
+    source:
+      address: "0xe3818504c1B32bF1557b16C238B2E01Fd3149C17"
+      abi: PILLAR
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - UserCounter
+        - TransferCounter
+      abis:
+        - name: PILLAR
+          file: ./abis/PILLAR.json
+      eventHandlers:
+        - event: Refund(indexed address,uint256)
+          handler: handleRefund
+        - event: Migrate(indexed address,indexed address,uint256)
+          handler: handleMigrate
+        - event: MoneyAddedForRefund(address,uint256,uint256)
+          handler: handleMoneyAddedForRefund
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/mapping.ts
