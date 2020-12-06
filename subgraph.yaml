@@ -1,0 +1,26 @@
+specVersion: 0.0.2
+description: Pillar token contract
+repository: https://github.com/cristian164/subgraph-pillar-token
+schema:
+    file: ./schema.graphql
+dataSources:
+    - kind: ethereum/contract
+      name: Pillar
+      network: mainnet
+      source:
+          address: "0xe3818504c1B32bF1557b16C238B2E01Fd3149C17"
+          abi: Pillar
+          startBlock: 4022181
+      mapping:
+          kind: ethereum/events
+          apiVersion: 0.0.4
+          language: wasm/assemblyscript
+          entities:
+              - Token
+          abis:
+              - name: Pillar
+                file: ./abis/Pillar.json
+          eventHandlers:
+              - event: Transfer(indexed address,indexed address,uint256)
+                handler: handleTransfer
+          file: ./src/mapping.ts
