@@ -7,7 +7,12 @@ import {
   Approval,
   Transfer
 } from "../generated/PILLAR/PILLAR"
-import { ExampleEntity } from "../generated/schema"
+import {
+  User,
+  UserCounter,
+  TransferCounter,
+  TotalSupply
+} from '../generated/schema'
 
 export function handleRefund(event: Refund): void {
   // Entities can be loaded from the store using a string ID; this ID
