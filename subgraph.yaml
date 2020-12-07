@@ -8,6 +8,7 @@ dataSources:
     source:
       address: "0xe3818504c1B32bF1557b16C238B2E01Fd3149C17"
       abi: PILLAR
+      startBlock: 4022181
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
