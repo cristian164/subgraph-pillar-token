@@ -27,8 +27,6 @@ dataSources:
           handler: handleMigrate
         - event: MoneyAddedForRefund(address,uint256,uint256)
           handler: handleMoneyAddedForRefund
-        - event: Approval(indexed address,indexed address,uint256)
-          handler: handleApproval
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
       file: ./src/mapping.ts
