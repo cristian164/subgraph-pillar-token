@@ -22,4 +22,5 @@ This Subgraph is deployed to exposes a GraphQL endpoint to query the events and 
 }
 ```
 Find out more [here](https://thegraph.com/explorer/subgraph/cristian164/pillar)
+
 Join [The Graph Discord](https://discord.com/invite/vtvv7FP) to receive support from the most amazing community in crypto.
