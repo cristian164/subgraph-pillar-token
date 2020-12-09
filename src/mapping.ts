@@ -3,7 +3,7 @@ import {Transfer} from "../generated/PILLAR/PILLAR"
 import {
   User,
   UserCounter,
-  TransferCounter
+  TransferCounter,
 } from '../generated/schema'
 
 export function handleTransfer(event: Transfer): void {
