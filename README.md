@@ -3,6 +3,7 @@ This Subgraph is deployed to exposes a GraphQL endpoint to query the events and 
 * users
 * usersCounter
 Example Queries will be displayed like this
+```
 {
   users(first: 5) {
     id
@@ -15,5 +16,5 @@ Example Queries will be displayed like this
     count
   }
 }
-
+```
 Find out more [here](https://thegraph.com/explorer/subgraph/cristian164/pillar)
